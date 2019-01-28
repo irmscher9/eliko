@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<script type=text/javascript>
+<!--window.location = window.location.href;-->
+</script>
+{% endblock %}
+
+{% block content %}
+<meta http-equiv="refresh" content="60"/>
+<br/><br/>
+<div class="container">
+<center><h3>Twitter top 10 trends</h3></center>
+    <br/>
+    <table class="table table-striped table-dark" style="width:100%">
+  <tr>
+    <th>GERMANY</th>
+      <th>Tweet volume</th>
+    <th>UNITED KINGDOM</th>
+      <th>Tweet volume</th>
+      <th>UNITED STATES</th>
+      <th>Tweet volume</th>
+  </tr>
+  <tr>
+    <td>
+        {% for x in ge %}
+        <li>{{ x }}</li>
+        {% endfor %}
+    </td>
+      <td>
+        {% for x in gev %}
+          {{ x }}<br/>
+        {% endfor %}
+    </td>
+    <td>
+        {% for x in uk %}
+            <li>{{ x }}</li>
+        {% endfor %}
+    </td>
+      <td>
+        {% for x in ukv %}
+          {{ x }}<br/>
+        {% endfor %}
+    </td>
+    <td>
+        {% for x in us %}
+            <li>{{ x }}</li>
+        {% endfor %}
+    </td>
+      <td>
+        {% for x in usv %}
+          {{ x }}<br/>
+        {% endfor %}
+    </td>
+  </tr>
+    </table>
+
+
+</div>
+{% endblock %}
